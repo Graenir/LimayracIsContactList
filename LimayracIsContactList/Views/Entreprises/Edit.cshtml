@@ -1,0 +1,67 @@
+﻿@model LimayracIsContactList.Application.DTO.EntrepriseDto
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<div class="container-panel">
+    <div class="container">
+
+        <h1>Edit</h1>
+
+        <h4>Entreprise</h4>
+        <hr />
+        <div class="row">
+            <div class="col-md-12">
+                <form asp-action="Edit" id="Edit">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <input type="hidden" asp-for="Id" />
+                            <div class="form-group">
+                                <label asp-for="Name" class="control-label"></label>
+                                <input asp-for="Name" class="form-control" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Siren" class="control-label"></label>
+                                <input asp-for="Siren" class="form-control" />
+                                <span asp-validation-for="Siren" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="City" class="control-label"></label>
+                                <input asp-for="City" class="form-control" />
+                                <span asp-validation-for="City" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Address" class="control-label"></label>
+                                <input asp-for="Address" class="form-control" />
+                                <span asp-validation-for="Address" class="text-danger"></span>
+                            </div>
+                        </div><div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="TelNumber" class="control-label"></label>
+                                <input asp-for="TelNumber" class="form-control" />
+                                <span asp-validation-for="TelNumber" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="WebSite" class="control-label"></label>
+                                <input asp-for="WebSite" class="form-control" />
+                                <span asp-validation-for="WebSite" class="text-danger"></span>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-button">
+            <input type="submit" value="Save" class="btn btn-success" form="Edit" />
+            <a asp-action="Index" class="btn btn-dark">Back to List</a>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
