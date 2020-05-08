@@ -10,13 +10,9 @@ namespace LimayracIsContactList.Infrastructure.Models
     {
         public string Name { get; set; }
 
-        public int Siren { get; set; }
-
         public string City { get; set; }
 
         public string Address { get; set; }
-
-        public int TelNumber { get; set; }
 
         public string WebSite { get; set; }
 
@@ -25,7 +21,9 @@ namespace LimayracIsContactList.Infrastructure.Models
 
         [DataType(DataType.Date)]
         public DateTime LastUpdate { get; set; }
+        public virtual ICollection<Internship> Internships { get; set; }
 
         public virtual ICollection<Service> Services { get; set; }
+        public virtual ICollection<Person> Persons { get; set; }
     }
 }

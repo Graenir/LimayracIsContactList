@@ -14,6 +14,5 @@ namespace LimayracIsContactList.Infrastructure.Models
 
         public virtual Entreprise Entreprise { get; set; }
 
-        public virtual ICollection<Internship> Internships { get; set; }
     }
 }

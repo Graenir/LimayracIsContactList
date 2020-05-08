@@ -1,4 +1,5 @@
-﻿using LimayracIsContactList.Infrastructure.Models;
+﻿using LimayracIsContactList.Infrastructure.ModelBuilders;
+using LimayracIsContactList.Infrastructure.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -68,5 +69,27 @@ namespace LimayracIsContactList.Infrastructure.Data
         /// The type of the internship.
         /// </value>
         public DbSet<InternshipType> InternshipType { get; set; }
+
+        /// <summary>
+        /// Gets or sets the student.
+        /// </summary>
+        /// <value>
+        /// The student.
+        /// </value>
+        public DbSet<Student> Student { get; set; }
+
+        /// <summary>
+        /// Gets or sets the class.
+        /// </summary>
+        /// <value>
+        /// The class.
+        /// </value>
+        public DbSet<Class> Class { get; set; }
+
+         protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            ClassModelBuilder.CreateClassModel(modelBuilder);
+            StudentModelBuilder.CreateStudentModel(modelBuilder);
+        }
     }
 }

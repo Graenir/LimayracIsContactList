@@ -6,13 +6,6 @@ namespace LimayracIsContactList.Infrastructure.Models
 {
     public class Person : BaseEntity
     {
-        /// <summary>
-        /// Gets or sets the identifier.
-        /// </summary>
-        /// <value>
-        /// The identifier.
-        /// </value>
-        public int Id { get; set; }
 
         /// <summary>
         /// Gets or sets the first name.
@@ -36,7 +29,15 @@ namespace LimayracIsContactList.Infrastructure.Models
         /// <value>
         /// The phone number.
         /// </value>
-        public int PhoneNumber { get; set; }
+        public int PhoneNumber1 { get; set; }
+
+        /// <summary>
+        /// Gets or sets the phone number.
+        /// </summary>
+        /// <value>
+        /// The phone number.
+        /// </value>
+        public int PhoneNumber2 { get; set; }
 
         /// <summary>
         /// Gets or sets the email.
@@ -44,22 +45,14 @@ namespace LimayracIsContactList.Infrastructure.Models
         /// <value>
         /// The email.
         /// </value>
-        public string Email { get; set; }
+        public string Email1 { get; set; }
 
         /// <summary>
-        /// Gets or sets the is student.
+        /// Gets or sets the email.
         /// </summary>
         /// <value>
-        /// The is student.
+        /// The email.
         /// </value>
-        public int IsStudent { get; set; }
-
-        /// <summary>
-        /// Gets or sets the service.
-        /// </summary>
-        /// <value>
-        /// The service.
-        /// </value>
-        public virtual ICollection<Internship> Internships { get; set; }
+        public string Email2 { get; set; }
     }
 }

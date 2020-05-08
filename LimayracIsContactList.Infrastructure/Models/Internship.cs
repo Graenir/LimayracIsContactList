@@ -37,7 +37,7 @@ namespace LimayracIsContactList.Infrastructure.Models
         /// <value>
         /// The service identifier.
         /// </value>
-        public int ServiceId { get; set; }
+        public int EntrepriseId { get; set; }
 
         /// <summary>
         /// Gets or sets the person identifier.
@@ -45,7 +45,7 @@ namespace LimayracIsContactList.Infrastructure.Models
         /// <value>
         /// The person identifier.
         /// </value>
-        public int PersonId { get; set; }
+        public int StudentId { get; set; }
 
         /// <summary>
         /// Gets or sets the type of the internship.
@@ -61,7 +61,7 @@ namespace LimayracIsContactList.Infrastructure.Models
         /// <value>
         /// The service.
         /// </value>
-        public Service Service { get; set; }
+        public Entreprise Entreprise { get; set; }
 
         /// <summary>
         /// Gets or sets the person.
@@ -69,6 +69,6 @@ namespace LimayracIsContactList.Infrastructure.Models
         /// <value>
         /// The person.
         /// </value>
-        public Person Person { get; set; }
+        public Student Student { get; set; }
     }
 }
